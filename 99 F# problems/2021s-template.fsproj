@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Compile Include="Types.fs" />
-    <Compile Include="Library.fs" />
+    <Compile Include="lists.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

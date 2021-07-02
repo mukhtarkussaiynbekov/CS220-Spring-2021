@@ -1,6 +1,6 @@
 module CS220.Program // This line declares Program module.
 
-open CS220.Library
+open CS220.Lists
 
 // Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
 
@@ -17,6 +17,15 @@ let main argv =
   let result9 = pack ["a";"a";"a";"a";"b";"c";"c";"a";"a";"d";"e";"e";"e";"e"]
   let result10 = encode ["a";"a";"a";"a";"b";"c";"c";"a";"a";"d";"e";"e";"e";"e"]
   let result11 = encodeModified <| List.ofSeq "aaaabccaadeeee"
+  let result12 = decodeModified [Multiple (4,'a'); Single 'b'; Multiple (2,'c'); Multiple (2,'a'); Single 'd'; Multiple (4,'e')]
+  let result13 = encodeDirect <| List.ofSeq "aaaabccaadeeee"
+  let result14 = dupli [1; 2; 3]
+  let result15 = repli (List.ofSeq "abc") 3
+  let result16 = dropEvery (List.ofSeq "abcdefghik") 3
+  let result17 = split (List.ofSeq "abcdefghik") 3
+  let result18 = slice ['a';'b';'c';'d';'e';'f';'g';'h';'i';'k'] 3 7
+  let result19 = rotate ['a';'b';'c';'d';'e';'f';'g';'h'] (-2)
+  let result20 = removeAt 1 <| List.ofSeq "abcd"
   printfn "%A" result1
   printfn "%A" result2
   printfn "%A" result3
@@ -28,4 +37,13 @@ let main argv =
   printfn "%A" result9
   printfn "%A" result10
   printfn "%A" result11
+  printfn "%A" result12
+  printfn "%A" result13
+  printfn "%A" result14
+  printfn "%A" result15
+  printfn "%A" result16
+  printfn "%A" result17
+  printfn "%A" result18
+  printfn "%A" result19
+  printfn "%A" result20
   0 // DON't touch this; this is an integer exit code meaning successful termination.
