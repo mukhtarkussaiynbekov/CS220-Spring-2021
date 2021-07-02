@@ -26,6 +26,11 @@ let main argv =
   let result18 = slice ['a';'b';'c';'d';'e';'f';'g';'h';'i';'k'] 3 7
   let result19 = rotate ['a';'b';'c';'d';'e';'f';'g';'h'] (-2)
   let result20 = removeAt 1 <| List.ofSeq "abcd"
+  let result21 = insertAt 'X' (List.ofSeq "abcd") 2
+  let result22 = range 4 9
+  let result23 = rnd_select (List.ofSeq "abcdefgh") 3
+  let result24 = diff_select 6 49
+  let result25 = rnd_permu <| List.ofSeq "abcdef"
   printfn "%A" result1
   printfn "%A" result2
   printfn "%A" result3
@@ -46,4 +51,9 @@ let main argv =
   printfn "%A" result18
   printfn "%A" result19
   printfn "%A" result20
+  printfn "%A" result21
+  printfn "%A" result22
+  printfn "%A" result23
+  printfn "%A" result24
+  printfn "%A" result25
   0 // DON't touch this; this is an integer exit code meaning successful termination.
